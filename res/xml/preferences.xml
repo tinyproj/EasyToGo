@@ -1,0 +1,9 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory
+		android:title="@string/prefs_general_title">
+		<EditTextPreference
+			android:key="skype_to_go_phone"
+			android:title="@string/prefs_skype_to_go_phone_title"
+			android:summary="@string/prefs_skype_to_go_phone_summary"/>
+</PreferenceCategory>
+</PreferenceScreen>

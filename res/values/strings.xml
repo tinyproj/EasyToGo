@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EasyToGo</string>
+	
+	<string name="prefs_general_title">General</string>
+	<string name="prefs_skype_to_go_phone_title">Skype To Go</string>
+	<string name="prefs_skype_to_go_phone_summary">Skype To Go phone number</string>
+	
+	<string name="menu_settings_title">Preferences</string>
+	
+	<string name="common_call">Call</string>
+	<string name="common_no_skype_to_go_phone_label">Skype To Go number is not configured.</string>
+	<string name="common_calling_info_label">Calling to %s via %s.</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>	
+	<string name="prefs_general_title">Ogólne</string>
+	<string name="prefs_skype_to_go_phone_title">Skype To Go</string>
+	<string name="prefs_skype_to_go_phone_summary">Numer telefonu Skype To Go</string>
+	
+	<string name="menu_settings_title">Ustawienia</string>
+	
+	<string name="common_call">Dzwoń</string>
+	<string name="common_no_skype_to_go_phone_label">Numer Skype To Go nie jest skonfigurowany.</string>
+	<string name="common_calling_info_label">Dzwonię do %s używając %s.</string>
+
+</resources>
