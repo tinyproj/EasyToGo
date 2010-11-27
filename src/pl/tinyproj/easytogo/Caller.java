@@ -22,6 +22,7 @@ import android.view.View.OnClickListener;
 import android.widget.Toast;
 
 public class Caller extends Activity implements OnClickListener {
+	private static final boolean LOG = false;
 	private static final String TAG = "EasyToGo";
 	private static final String FOREIGN_NO_CHOICE = "2";
 	private static final String COMMA = ",";
@@ -47,9 +48,13 @@ public class Caller extends Activity implements OnClickListener {
 				Uri uri = intent.getData();
 
 				String phoneNumber = uri.toString().substring(4);
-				Log.d(TAG, "Phone number before decoding " + phoneNumber);
+				if (LOG) {
+					Log.d(TAG, "Phone number before decoding " + phoneNumber);
+				}
 				phoneNumber = URLDecoder.decode(phoneNumber);
-				Log.d(TAG, "Phone number after decoding " + phoneNumber);
+				if (LOG) {
+					Log.d(TAG, "Phone number after decoding " + phoneNumber);
+				}
 				call(phoneNumber);
 				finish();
 			}
@@ -94,7 +99,9 @@ public class Caller extends Activity implements OnClickListener {
 				Cursor c = managedQuery(contactData, null, null, null, null);
 				if (c.moveToFirst()) {
 					String phoneNumber = c.getString(c.getColumnIndexOrThrow(ContactsContract.CommonDataKinds.Phone.NUMBER));
-					Log.d(TAG, "Choosen phone number " + phoneNumber);
+					if (LOG) {
+						Log.d(TAG, "Choosen phone number " + phoneNumber);
+					}
 					call(phoneNumber);
 
 				}
@@ -113,7 +120,9 @@ public class Caller extends Activity implements OnClickListener {
 
 	private void call(String number) {
 		String url = createTelUrl(number);
-		Log.d(TAG, "Created URL " + url);
+		if (LOG) {
+			Log.d(TAG, "Created URL " + url);
+		}
 		if (null != url) {
 			Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse(url));
 			intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
